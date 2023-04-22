@@ -23,7 +23,7 @@ WORKDIR /app/stable-diffusion-webui
 ENV MODEL_URL=${MODEL_URL}
 ENV HF_TOKEN=${HF_TOKEN}
 
-RUN pip install tqdm requests
+RUN pip install tqdm requests sanic
 ADD download_checkpoint.py .
 RUN python download_checkpoint.py
 
